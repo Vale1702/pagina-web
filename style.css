@@ -6,6 +6,8 @@
     --red: #FE4461;
     --dark-blue: #171C26;
     --gray: #747C8C;
+
+    --ancho-max: 1728px;
 }
 
 *{
@@ -21,7 +23,8 @@ html {
 
 header {
     display: flex;
-    width: 1728px;
+    /* width: 1730px; */
+    max-width: var(--ancho-max);
     min-width: 428px;
     height: 128px;
     text-align: center;
@@ -53,10 +56,6 @@ ul {
     justify-content: center; 
     align-items: center;
     gap: 25px;
-}
-
-li{
-    display: flex;
 }
 
 a {
@@ -97,18 +96,183 @@ main{
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
     z-index: -1;
 }
 
 main div button{
-    width: 260px;
+    width: 358px;
     height: 68px;
     top: 548px;
     position: absolute;
-    left: calc(50% - 110px);
+    left: calc(50% - 175px);    
     background-color: var(--black-2);
     border-radius: 50px;
     font-size: 1.8rem;
     color: var(--white);
+}
+
+.version-container{
+    flex-direction: row;
+    width: 1730px;
+    height: 385px;
+    display: flex;
+}
+
+.user, .col{
+    width:865px;
+    padding: 50px;
+}
+
+.user{
+    background-color: var(--dark-blue);
+}
+
+.col{
+    background-color: var(--gray);
+}
+
+.title{
+    font-weight: 700;
+    font-size: 3.8rem;
+    color: var(--white);
+}
+
+.description{
+    font-weight: 200;
+    color: var(--white);
+    font-size: 1.9rem;
+    margin-top: 10px;
+}
+
+.list{
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 35px;
+    padding-left: 17.2rem;
+    margin-top: 14px;
+    color: var(--white-2);
+}
+.list p{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: .3rem 0;
+}
+
+.subtitle-user{
+    color: var(--red);
+    font-weight: 400;
+    font-size: 2.4rem;
+}
+
+.subtitle-col{
+    color: var(--black);
+    font-weight: 400;
+    font-size: 2.4rem;
+}
+
+.check-icon-red{
+    background-image: url(./assets/iconos/check-red.svg);
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+.check-icon-black{
+    background-image: url(./assets/iconos/check-black.svg);
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+
+section div button{
+    width: 358px;
+    height: 68px;
+    top: 1138px;
+    position: absolute;
+    left: calc(50% - 175px);
+    background-color: var(--red);
+    border-radius: 50px;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--black);
+    box-shadow: 0px 0px 20px 1px;
+}
+
+.section-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-container article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    width: 432px;
+    height: 366px;
+}
+
+.about-program{
+    background-color: var(--red);
+}
+.about-features{
+    background-color: var(--dark-blue);
+}
+.about-community{
+    background-color: var(--gray);
+}
+.about-resources{
+    background-color: var(--black-2);
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    height: 100px;
+}
+
+.icons img{
+    object-fit: contain;
+}
+
+.title-2{
+    color: var(--dark-blue);
+}
+    
+.title-3{
+    color: var(--red);
+}
+
+.description-2{
+    font-size: 2.4rem;
+    color: var(--white);
+    font-weight: 400;
+    margin: 23px;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--dark-blue);
+    color: var(--white-2);
+    width: 1728px;
+    height: 127px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+footer strong{
+    word-spacing: 8px;
+    height: 44px;
+    margin-top: 22px;
 }
